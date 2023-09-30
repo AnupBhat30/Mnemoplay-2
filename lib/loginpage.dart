@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:learning/mainpage.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFFFFFFF),
-        title: Text('Login', style: TextStyle(
-          color: Color(0xFF907F9F),
-          fontSize: 45,
-        )),
+        title: Text(
+          'Login',
+          style: TextStyle(
+            color: Color(0xFF907F9F),
+            fontSize: 45,
+          ),
+        ),
         centerTitle: true,
       ),
       body: Container(
         decoration: BoxDecoration(
+          color: Color.fromRGBO(170, 153, 211, 1.0), // Solid color
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF907F9F), Color(0xFF907F9F)],
+            begin: Alignment(-0.5, -1.0),
+            end: Alignment(0.5, 1.0),
+            transform: GradientRotation(
+                173 * 3.141592653589793 / 180), // Convert degrees to radians
+            colors: [
+              Color.fromRGBO(170, 153, 211, 1.0), // Start color
+              Color.fromRGBO(203, 174, 174, 1.0), // Middle color
+              Color.fromRGBO(176, 209, 198, 1.0), // End color
+            ],
           ),
         ),
         child: SingleChildScrollView(
@@ -28,7 +38,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 20),
               Center(
                 child: Text(
-                  'Welcome!',
+                  'MnemoPlay',
                   style: TextStyle(
                     fontSize: 36,
                     color: Color(0xFFFFFFFF),
@@ -104,9 +114,9 @@ class LoginPage extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 4,
-                        offset: Offset(0, 3),
+                        spreadRadius: 0,
+                        blurRadius: 15,
+                        offset: Offset(0, 15),
                       ),
                     ],
                   ),
@@ -116,7 +126,8 @@ class LoginPage extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFFFFFFF),
-                      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 40, vertical: 10),
                       elevation: 20,
                     ),
                     child: Text(
@@ -124,8 +135,6 @@ class LoginPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         color: Color(0xFF907F9F),
-
-
                       ),
                     ),
                   ),
@@ -174,10 +183,10 @@ class LoginPage extends StatelessWidget {
                     ),
                     SizedBox(width: 20),
                     Container(
-                      width: 100, // Adjust the button size as needed
+                      width: 100,
                       height: 45,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle, // Create a circular shape
+                        shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.5),
@@ -234,4 +243,10 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: LoginPage(),
+  ));
 }
