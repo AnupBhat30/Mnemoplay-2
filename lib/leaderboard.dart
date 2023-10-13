@@ -19,13 +19,13 @@ class MyApp extends StatelessWidget {
 
 class LeaderboardPage extends StatelessWidget {
   final List<User> users = [
-<<<<<<< HEAD
+
     User(name: 'User 1', avatarUrl: 'https://example.com/avatar1.jpg', score: 1000),
     User(name: 'User 2', avatarUrl: 'https://example.com/avatar2.jpg', score: 900),
     User(name: 'User 3', avatarUrl: 'https://example.com/avatar3.jpg', score: 800),
     User(name: 'User 4', avatarUrl: 'https://example.com/avatar4.jpg', score: 700),
     User(name: 'User 5', avatarUrl: 'https://example.com/avatar5.jpg', score: 600),
-=======
+
     User(
         name: 'User 1',
         avatarUrl: 'https://example.com/avatar1.jpg',
@@ -46,7 +46,7 @@ class LeaderboardPage extends StatelessWidget {
         name: 'User 5',
         avatarUrl: 'https://example.com/avatar5.jpg',
         score: 600),
->>>>>>> eeefc354556e6100309bf22e781446a336131e4b
+
   ];
 
   @override
@@ -54,20 +54,12 @@ class LeaderboardPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-<<<<<<< HEAD
-          child: Text('Leaderboard', style:TextStyle(
-            color: Color(0xFF907F9F),
-            fontSize: 45,
-            fontWeight: FontWeight.bold,
-          )),
-=======
           child: Text('Leaderboard',
               style: TextStyle(
                 color: Color(0xFF907F9F),
                 fontSize: 45,
                 fontWeight: FontWeight.bold,
               )),
->>>>>>> eeefc354556e6100309bf22e781446a336131e4b
         ),
       ),
       backgroundColor: Color(0xFF907F9F),
@@ -85,15 +77,9 @@ class LeaderboardPage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-<<<<<<< HEAD
-        buildPodiumUser(users[1], 2),
-        buildPodiumUser(users[0], 1),
-        buildPodiumUser(users[2], 3), 
-=======
         buildPodiumUser(users[1], 2), // Middle avatar with rank 1
         buildPodiumUser(users[0], 1), // First avatar
         buildPodiumUser(users[2], 3), // Third avatar
->>>>>>> eeefc354556e6100309bf22e781446a336131e4b
       ],
     );
   }
