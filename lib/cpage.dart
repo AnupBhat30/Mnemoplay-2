@@ -23,7 +23,10 @@ class _CPageState extends State<CPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF907F9F),
+<<<<<<< HEAD
 
+=======
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [

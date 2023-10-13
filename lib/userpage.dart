@@ -80,7 +80,11 @@ class UserPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFF907F9F),
                       padding:
+<<<<<<< HEAD
                       EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+=======
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -99,7 +103,11 @@ class UserPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFF907F9F),
                       padding:
+<<<<<<< HEAD
                       EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+=======
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),

@@ -3,6 +3,10 @@ import 'package:learning/biopage.dart';
 import 'package:learning/leaderboard.dart';
 import 'package:learning/userpage.dart';
 import 'package:learning/mathhomepage.dart';
+<<<<<<< HEAD
+=======
+
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
 class MathPage extends StatefulWidget {
   @override
   _MathPageState createState() => _MathPageState();
@@ -22,7 +26,10 @@ class _MathPageState extends State<MathPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF907F9F),
+<<<<<<< HEAD
 
+=======
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -58,4 +65,8 @@ class _MathPageState extends State<MathPage> {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> eeefc354556e6100309bf22e781446a336131e4b
