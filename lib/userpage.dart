@@ -2,26 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 
 class UserPage extends StatelessWidget {
+  void _editProfile() {
+    // Add functionality for Edit Profile button here
+  }
+
+  void _openAppearance() {
+    // Add functionality for Appearance button here
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF907F9F),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Align(
-          alignment: Alignment.center,
-          child: Text(
-            'User Profile',
-            style: TextStyle(
-              color: Color(0xFF907F9F),
-              fontSize: 45,
-              fontWeight: FontWeight.bold,
-            ),
+        title: Text(
+          'User Profile',
+          style: TextStyle(
+            color: Color(0xFF907F9F),
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 20),
             Center(
@@ -43,186 +50,179 @@ class UserPage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontSize: 24,
                 ),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Center(
               child: Text(
                 'Bio',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  child: Text(
-                    'Edit Profile',
-                    style: TextStyle(
-                      color: Color(0xFF907F9F),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                SizedBox(width: 40),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  child: Text(
-                    'Appearance',
-                    style: TextStyle(
-                      color: Color(0xFF907F9F),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Divider(
-              thickness: 2,
-              color: Colors.white,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+              ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(width: 320),
-                  Text(
-                    'Statistics',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                  ElevatedButton(
+                    onPressed: _editProfile,
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF907F9F),
+                      padding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Text(
+                      'Edit Profile',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: _openAppearance,
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF907F9F),
+                      padding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Text(
+                      'Appearance',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Stack(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(64),
-                  width: 750,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Text(
-                    '',
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    'Statistics',
                     style: TextStyle(
                       color: Color(0xFF907F9F),
-                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
                     ),
                   ),
-                ),
-                Positioned(
-                  top: 10,
-                  left: 200,
-                  child: Row(
-                    children: [
-                      Image.asset('assets/temp/fire.png', height: 20, width: 20),
-                      SizedBox(width: 5), // Add spacing
-                      Text(
-                        'Streaks',
-                        style: TextStyle(
-                          color: Color(0xFF907F9F),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/temp/fire.png',
+                                height: 18, width: 18),
+                            SizedBox(width: 10),
+                            Text(
+                              'Streaks',
+                              style: TextStyle(
+                                color: Color(0xFF907F9F),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
-                  top: 10,
-                  right: 200,
-                  child: Row(
-                    children: [
-                      Image.asset('assets/temp/leaderboard.png', height: 35, width: 35),
-                      SizedBox(width: 5),
-                      Text(
-                        'Leaderboard',
-                        style: TextStyle(
-                          color: Color(0xFF907F9F),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                        Row(
+                          children: [
+                            Image.asset('assets/temp/leaderboard.png',
+                                height: 40, width: 40),
+                            SizedBox(width: 10),
+                            Text(
+                              'Leaderboard',
+                              style: TextStyle(
+                                color: Color(0xFF907F9F),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                Positioned(
-                  bottom: 50,
-                  left: 200,
-                  child: Row(
-                    children: [
-                      Image.asset('assets/temp/clock.png', height: 20, width: 20),
-                      Text(
-                        'Time Spent',
-                        style: TextStyle(
-                          color: Color(0xFF907F9F),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/temp/clock.png',
+                                height: 18, width: 18),
+                            SizedBox(width: 10),
+                            Text(
+                              'Time Spent',
+                              style: TextStyle(
+                                color: Color(0xFF907F9F),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
-                  bottom: 50,
-                  right: 245,
-                  child: Row(
-                    children: [
-                      Image.asset('assets/temp/book.png', height: 35, width: 35),
-                      Text(
-                        'Courses',
-                        style: TextStyle(
-                          color: Color(0xFF907F9F),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                        Row(
+                          children: [
+                            Image.asset('assets/temp/book.png',
+                                height: 25, width: 25),
+                            SizedBox(width: 10),
+                            Text(
+                              'Courses',
+                              style: TextStyle(
+                                color: Color(0xFF907F9F),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                primary: Colors.red,
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
               child: Text(
@@ -230,9 +230,11 @@ class UserPage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontSize: 18,
                 ),
               ),
             ),
+            SizedBox(height: 20),
           ],
         ),
       ),

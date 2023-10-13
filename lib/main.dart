@@ -5,6 +5,9 @@ import 'package:learning/mathpage.dart';
 import 'package:learning/cpage.dart';
 import 'package:learning/logopage.dart';
 import 'package:learning/userpage.dart';
+import 'package:learning/mathhomepage.dart';
+import 'package:learning/chomepage.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -29,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/math':(context)=>MathPage(),
         '/c':(context)=>CPage(),
         '/logo': (context) => LogoScreen(),
+        '/ch':(context)=>CHome(),
       },
     );
   }
