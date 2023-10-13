@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  circular_profile_avatar: ^2.0.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
