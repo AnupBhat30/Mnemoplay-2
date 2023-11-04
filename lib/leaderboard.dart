@@ -19,13 +19,6 @@ class MyApp extends StatelessWidget {
 
 class LeaderboardPage extends StatelessWidget {
   final List<User> users = [
-
-    User(name: 'User 1', avatarUrl: 'https://example.com/avatar1.jpg', score: 1000),
-    User(name: 'User 2', avatarUrl: 'https://example.com/avatar2.jpg', score: 900),
-    User(name: 'User 3', avatarUrl: 'https://example.com/avatar3.jpg', score: 800),
-    User(name: 'User 4', avatarUrl: 'https://example.com/avatar4.jpg', score: 700),
-    User(name: 'User 5', avatarUrl: 'https://example.com/avatar5.jpg', score: 600),
-
     User(
         name: 'User 1',
         avatarUrl: 'https://example.com/avatar1.jpg',
@@ -46,7 +39,6 @@ class LeaderboardPage extends StatelessWidget {
         name: 'User 5',
         avatarUrl: 'https://example.com/avatar5.jpg',
         score: 600),
-
   ];
 
   @override

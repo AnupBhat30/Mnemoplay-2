@@ -18,15 +18,11 @@ class _CPageState extends State<CPage> {
     LeaderboardPage(),
     UserPage(),
   ];
-  bool showAppBar = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF907F9F),
-<<<<<<< HEAD
-
-=======
->>>>>>> eeefc354556e6100309bf22e781446a336131e4b
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -55,8 +51,6 @@ class _CPageState extends State<CPage> {
         onTap: (int index) {
           setState(() {
             currentIndex = index;
-            showAppBar = index != 2;
-            showAppBar = index != 3;
           });
         },
       ),

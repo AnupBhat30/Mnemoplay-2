@@ -12,20 +12,11 @@ class MathHome extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/c');
               },
-              child: Image.asset('assets/temp/c.png', height: 30, width: 30)
-          ),
-        ),
-        floatingActionButton: Container(
-          height: 50,
-          width: 50,
-          child: FloatingActionButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/c');
-              },
               child: Image.asset('assets/temp/c.png', height: 30, width: 30)),
         ),
         backgroundColor: Color(0xFF907F9F),
         appBar: AppBar(
+          leading:null,
           backgroundColor: Colors.white,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -46,9 +37,6 @@ class MathHome extends StatelessWidget {
               ),
             ],
           ),
-        )
-    );
+        ));
   }
-
 }
-

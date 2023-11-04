@@ -17,6 +17,7 @@ class CHome extends StatelessWidget {
         ),
         backgroundColor: Color(0xFF907F9F),
         appBar: AppBar(
+          leading:null,
           backgroundColor: Colors.white,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,

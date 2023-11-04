@@ -11,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_animate: 4.2.0+1
+  audioplayers: ^0.20.1
+  video_player: ^2.7.2
+  animated_text_kit: ^4.2.1
   circular_profile_avatar: ^2.0.0
   cupertino_icons: ^1.0.2
 
@@ -24,6 +28,10 @@ flutter:
   assets:
     - assets/images/
     - assets/temp/
+    - assets/temp/alongwith.mp3
+    - assets/temp/inthissession.mp3
+    - assets/temp/MatrixScene.mp4
+    - assets/temp/rowsandcolumns.mp3
   fonts:
     - family: Urbanist
       fonts:
