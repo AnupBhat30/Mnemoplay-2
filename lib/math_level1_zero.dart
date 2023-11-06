@@ -109,14 +109,14 @@ class _MLevel1ZeroState extends State<MLevel1Zero> with TickerProviderStateMixin
                       right: 90,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed('/math');
+                          Navigator.of(context).pushNamed('/m1quiz');
                         },
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(Colors.orange),
                           shape: MaterialStateProperty.all(StadiumBorder()),
                         ),
                         child: Text(
-                          'Next',
+                          'Finish',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
