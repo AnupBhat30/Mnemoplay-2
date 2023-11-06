@@ -232,7 +232,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed('/mlv1');
+                          Navigator.of(context).pushNamed('/');
                         },
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.blue,
