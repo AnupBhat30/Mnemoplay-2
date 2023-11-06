@@ -3,41 +3,50 @@ import 'package:flutter/material.dart';
 class CHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-        floatingActionButton: Container(
-          height: 50,
-          width: 50,
-          child: FloatingActionButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/math');
-            },
-            child: Image.asset('assets/temp/math.png', height: 30, width: 30),
-          ),
+      backgroundColor: Color(0xFF907F9F),
+      floatingActionButton: Container(
+        height: 50,
+        width: 50,
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/math');
+          },
+          child: Image.asset('assets/temp/math.png', height: 30, width: 30),
         ),
-        backgroundColor: Color(0xFF907F9F),
-        appBar: AppBar(
-          leading:null,
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(width: 10),
-              Image.asset(
-                'assets/temp/c.png',
-                height: 40,
-                width: 40,
+      ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/temp/mnemomap.png'),
+                fit: BoxFit.cover,
               ),
-              Text(
-                'C',
-                style: TextStyle(
-                  color: Color(0xFF907F9F),
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
+            ),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
           ),
-        ));
+          Positioned(
+            top: 120.0,
+            left: 230.0,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/mlv1');},
+                child: Image.asset('assets/temp/level.png', height:45, width:45)),
+          ),
+          Positioned(
+            top: 235.0,
+            left: 230.0,
+            child: Image.asset('assets/temp/level.png', height:45, width:45),
+          ),
+          Positioned(
+            top: 370.0,
+            left: 230.0,
+            child: Image.asset('assets/temp/level.png', height:45, width:45),
+          ),
+        ],
+      ),
+    );
   }
 }
