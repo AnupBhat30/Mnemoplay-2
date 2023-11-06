@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning/loginpage.dart';
 import 'package:learning/mainpage.dart';
 import 'package:learning/math_level1_identity.dart';
+import 'package:learning/math_level1_quiz.dart';
 import 'package:learning/math_level1_row.dart';
 import 'package:learning/math_level1_triangular.dart';
 import 'package:learning/math_level1_zero.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
         '/mlv1trp': (context) => MLevel1TriangularPage(),
         '/mlv1ip': (context)=> MLevel1IdentityPage(),
         '/mlv1zp': (context)=>MLevel1Zero(),
+        '/m1quiz': (context)=>MLevel1Quiz(),
       },
     );
   }
