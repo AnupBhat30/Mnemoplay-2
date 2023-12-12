@@ -17,6 +17,8 @@ import 'package:learning/chomepage.dart';
 import 'package:learning/math_level1_matrices.dart';
 import 'package:learning/math_level1_matrices1.dart';
 import 'package:learning/math_level1_row.dart';
+import 'package:learning/worldmap.dart';
+import 'arch.dart';
 import 'math_level1_column.dart';
 import 'math_level1_diagonal.dart';
 import 'math_level1_square.dart';
@@ -54,7 +56,9 @@ class MyApp extends StatelessWidget {
         '/mlv1trp': (context) => MLevel1TriangularPage(),
         '/mlv1ip': (context)=> MLevel1IdentityPage(),
         '/mlv1zp': (context)=>MLevel1Zero(),
-        '/m1quiz': (context)=>MLevel1Quiz(),
+        '/m1quiz': (context)=>const MLevel1Quiz(),
+        '/ar': (context)=>ArchPage(),
+        // '/wm': (context)=>MapPage(),
       },
     );
   }

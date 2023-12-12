@@ -226,14 +226,16 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
                       playAudio();
                     },
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/ar');
+                      },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         backgroundColor: Colors.teal,
                       ),
-                      child: Text('Google Viewer', style: TextStyle(fontSize: 20,
+                      child: Text('Architecture', style: TextStyle(fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.white)),
                     ),
