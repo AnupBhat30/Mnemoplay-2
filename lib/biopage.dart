@@ -22,39 +22,38 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
   }
 
   void playAudio() async {
-    int result = await audioPlayer.play('assets/temp/forest.mp3', isLocal: true);
-    if (result == 1) {
-      // Success
+    try {
+      await audioPlayer.play(AssetSource('assets/temp/forest.mp3'));
       print('Forest audio played');
-    } else {
-      // Error
-      print('Error playing forest audio');
+    } catch (e) {
+      print('Error playing forest audio: $e');
     }
   }
+
   void stopAudio() async {
     await audioPlayer.stop();
   }
 
   void playRiverAudio() async {
-    int result = await hoverAudioPlayer.play('assets/temp/river.mp3', isLocal: true);
-
-    if (result == 1) {
+    try {
+      await hoverAudioPlayer.play(AssetSource('assets/temp/river.mp3'));
       print('River audio played');
       audioPlayer.setVolume(0.5);
-    } else {
-      print('Error playing river audio');
+    } catch (e) {
+      print('Error playing river audio: $e');
     }
   }
 
   void stopRiverAudio() async {
     await hoverAudioPlayer.stop();
   }
+
   void playCricketAudio() async {
-    int result = await hoverAudioPlayer.play('assets/temp/cricket.mp3', isLocal: true);
-    if (result == 1) {
+    try {
+      await hoverAudioPlayer.play(AssetSource('assets/temp/cricket.mp3'));
       print('Cricket audio played');
-    } else {
-      print('Error playing cricket audio');
+    } catch (e) {
+      print('Error playing cricket audio: $e');
     }
   }
 
@@ -63,25 +62,27 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
   }
 
   void playFrogAudio() async {
-    int result = await hoverAudioPlayer.play('assets/temp/frogs.mp3', isLocal: true);
-    if (result == 1) {
+    try {
+      await hoverAudioPlayer.play(AssetSource('assets/temp/frogs.mp3'));
       print('Frog audio played');
-    } else {
-      print('Error playing frog audio');
+    } catch (e) {
+      print('Error playing frog audio: $e');
     }
   }
+
   void stopFrogAudio() async {
     await hoverAudioPlayer.stop();
   }
 
   void playOwlAudio() async {
-    int result = await hoverAudioPlayer.play('assets/temp/owl.mp3', isLocal: true);
-    if (result == 1) {
+    try {
+      await hoverAudioPlayer.play(AssetSource('assets/temp/owl.mp3'));
       print('Owl audio played');
-    } else {
-      print('Error playing owl audio');
+    } catch (e) {
+      print('Error playing owl audio: $e');
     }
   }
+
   void stopOwlAudio() async {
     await hoverAudioPlayer.stop();
   }
@@ -137,9 +138,11 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
                         ),
                         backgroundColor: Colors.teal,
                       ),
-                      child: Text('Biomimicry', style: TextStyle(fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                      child: Text('Biomimicry',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
                     ),
                   ),
                 ),
@@ -169,9 +172,11 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
                         ),
                         backgroundColor: Colors.teal,
                       ),
-                      child: Text('Quiz', style: TextStyle(fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                      child: Text('Quiz',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
                     ),
                   ),
                 ),
@@ -201,9 +206,11 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
                         ),
                         backgroundColor: Colors.teal,
                       ),
-                      child: Text('AR', style: TextStyle(fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                      child: Text('AR',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
                     ),
                   ),
                 ),
@@ -235,9 +242,11 @@ class _BioPageState extends State<BioPage> with TickerProviderStateMixin {
                         ),
                         backgroundColor: Colors.teal,
                       ),
-                      child: Text('Architecture', style: TextStyle(fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                      child: Text('Architecture',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
                     ),
                   ),
                 ),

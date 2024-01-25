@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:audioplayers/audioplayers.dart';
+
 class MLevel1ColumnPage extends StatefulWidget {
   const MLevel1ColumnPage({Key? key}) : super(key: key);
   @override
   State<MLevel1ColumnPage> createState() => _MLevel1ColumnPageState();
 }
 
-class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProviderStateMixin{
+class _MLevel1ColumnPageState extends State<MLevel1ColumnPage>
+    with TickerProviderStateMixin {
   bool _showText = false;
   bool _showTypewriterText = false;
   bool _showTypewriterText2 = false;
-  bool _showTypewriterText3=false;
-  bool _showTypewriterText4=false;
-  bool _showTypewriterText5=false;
-  bool _showTypewriterText6=false;
+  bool _showTypewriterText3 = false;
+  bool _showTypewriterText4 = false;
+  bool _showTypewriterText5 = false;
+  bool _showTypewriterText6 = false;
   late AnimationController _controller;
   bool _showNextButton = false;
   late Animation<double> _animation;
   late AudioPlayer audioPlayer;
   @override
   void initState() {
-
     super.initState();
     _controller = AnimationController(
       vsync: this,
@@ -36,6 +37,7 @@ class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProvid
     audioPlayer = AudioPlayer();
     _loadAudioAndAnimateText();
   }
+
   Future<void> _loadAudioAndAnimateText() async {
     await playAudio('assets/temp/columnmatrix1.mp3');
     setState(() {
@@ -76,15 +78,16 @@ class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProvid
       _showNextButton = true;
     });
   }
-  Future<void> playAudio(String audioPath) async {
-    int result = await audioPlayer.play(audioPath, isLocal: true);
 
-    if (result == 1) {
+  Future<void> playAudio(String audioPath) async {
+    try {
+      await audioPlayer.play(AssetSource(audioPath));
       print("Audio started playing.");
-    } else {
-      print("Error playing audio");
+    } catch (e) {
+      print("Error playing audio: $e");
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +112,6 @@ class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProvid
               child: Column(
                 children: [
                   Center(child: Image.asset('assets/temp/columnmatrix.png')),
-
                   SizedBox(height: 20),
                   if (_showTypewriterText)
                     DefaultTextStyle(
@@ -228,14 +230,15 @@ class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProvid
                   SizedBox(height: 80),
                   if (_showNextButton)
                     Positioned(
-                      top:20,
+                      top: 20,
                       right: 90,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.of(context).pushNamed('/mlv1sp');
                         },
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.orange),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.orange),
                           shape: MaterialStateProperty.all(StadiumBorder()),
                         ),
                         child: Text(
@@ -254,8 +257,6 @@ class _MLevel1ColumnPageState extends State<MLevel1ColumnPage> with TickerProvid
           ],
         ),
       ),
-
     );
   }
-
 }

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:audioplayers/audioplayers.dart';
+
 class MLevel1Page extends StatefulWidget {
   const MLevel1Page({Key? key}) : super(key: key);
   @override
   State<MLevel1Page> createState() => _MLevel1PageState();
 }
-class _MLevel1PageState extends State<MLevel1Page> with TickerProviderStateMixin {
+
+class _MLevel1PageState extends State<MLevel1Page>
+    with TickerProviderStateMixin {
   bool _showText = false;
   bool _showTypewriterText = false;
   bool _showTypewriterText2 = false;
@@ -55,12 +58,11 @@ class _MLevel1PageState extends State<MLevel1Page> with TickerProviderStateMixin
   }
 
   Future<void> playAudio(String audioPath) async {
-    int result = await audioPlayer.play(audioPath, isLocal: true);
-
-    if (result == 1) {
+    try {
+      await audioPlayer.play(AssetSource(audioPath));
       print("Audio started playing.");
-    } else {
-      print("Error playing audio");
+    } catch (e) {
+      print("Error playing audio: $e");
     }
   }
 
@@ -126,7 +128,7 @@ class _MLevel1PageState extends State<MLevel1Page> with TickerProviderStateMixin
                       ],
                     ),
                   ),
-                SizedBox(height:240),
+                SizedBox(height: 240),
                 if (_showNextButton)
                   ElevatedButton(
                     onPressed: () {
@@ -148,7 +150,6 @@ class _MLevel1PageState extends State<MLevel1Page> with TickerProviderStateMixin
               ],
             ),
           ),
-
         ],
       ),
     );

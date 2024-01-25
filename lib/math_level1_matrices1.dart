@@ -8,20 +8,20 @@ class MLevel1Page1 extends StatefulWidget {
   @override
   MLevel1Page1State createState() => MLevel1Page1State();
 }
-class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixin {
+
+class MLevel1Page1State extends State<MLevel1Page1>
+    with TickerProviderStateMixin {
   bool _showText = false;
   bool _showTypewriterText = false;
   bool _showTypewriterText2 = false;
-  bool _showTypewriterText3=false;
+  bool _showTypewriterText3 = false;
   late AnimationController _controller;
   bool _showNextButton = false;
   late Animation<double> _animation;
   late AudioPlayer audioPlayer;
 
-
   @override
   void initState() {
-
     super.initState();
     _controller = AnimationController(
       vsync: this,
@@ -36,6 +36,7 @@ class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixi
     audioPlayer = AudioPlayer();
     _loadAudioAndAnimateText();
   }
+
   Future<void> _loadAudioAndAnimateText() async {
     await playAudio('assets/temp/grid.mp3');
     setState(() {
@@ -61,15 +62,16 @@ class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixi
       _showNextButton = true;
     });
   }
-  Future<void> playAudio(String audioPath) async {
-    int result = await audioPlayer.play(audioPath, isLocal: true);
 
-    if (result == 1) {
+  Future<void> playAudio(String audioPath) async {
+    try {
+      await audioPlayer.play(AssetSource(audioPath));
       print("Audio started playing.");
-    } else {
-      print("Error playing audio");
+    } catch (e) {
+      print("Error playing audio: $e");
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,8 +95,10 @@ class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixi
             Center(
               child: Column(
                 children: [
-                  Center(child: Image.asset('assets/temp/matrix.png', )),
-
+                  Center(
+                      child: Image.asset(
+                    'assets/temp/matrix.png',
+                  )),
                   SizedBox(height: 20),
                   if (_showTypewriterText)
                     DefaultTextStyle(
@@ -156,14 +160,15 @@ class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixi
                   SizedBox(height: 155),
                   if (_showNextButton)
                     Positioned(
-                      top:20,
+                      top: 20,
                       right: 90,
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.of(context).pushNamed('/mlv1rp');
                         },
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.orange),
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.orange),
                           shape: MaterialStateProperty.all(StadiumBorder()),
                         ),
                         child: Text(
@@ -179,13 +184,12 @@ class MLevel1Page1State extends State<MLevel1Page1> with TickerProviderStateMixi
                 ],
               ),
             ),
-
           ],
-
         ),
       ),
     );
   }
+
   @override
   void dispose() {
     _controller.dispose();
