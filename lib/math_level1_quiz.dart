@@ -15,11 +15,11 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
 
   List<QuizQuestion> _questions = [
     QuizQuestion(
-        'Which matrix has equal number of rows and columns?',
-        ['Square Matrix', 'Column Matrix', 'Row Matrix', 'None of the above'],
-        'Square Matrix',
-        '.',
-        'assets/temp/squareq.png',
+      'Which matrix has equal number of rows and columns?',
+      ['Square Matrix', 'Column Matrix', 'Row Matrix', 'None of the above'],
+      'Square Matrix',
+      '.',
+      'assets/temp/squareq.png',
     ),
     QuizQuestion(
       'Calculate the trace of the above matrix',
@@ -149,13 +149,14 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF907F9F),
+      backgroundColor: Color(0xFFF7E7CE),
       appBar: AppBar(
+        backgroundColor: Color(0xFF6F4E37),
         title: Center(
           child: Text(
             'Types Of Matrices',
             style: TextStyle(
-              color: Color(0xFF907F9F),
+              color: Color(0xFFF7E7CE),
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
@@ -170,7 +171,7 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
             children: <Widget>[
               Text(
                 'Question ${_currentQuestionIndex + 1} of ${totalQuestions}',
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 18, color: Color(0xFF6F4E37),),
               ),
               SizedBox(height: 20),
               Card(
