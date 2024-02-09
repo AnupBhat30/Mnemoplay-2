@@ -10,6 +10,7 @@ class MLevel1ColumnPage extends StatefulWidget {
 
 class _MLevel1ColumnPageState extends State<MLevel1ColumnPage>
     with TickerProviderStateMixin {
+
   bool _showText = false;
   bool _showTypewriterText = false;
   bool _showTypewriterText2 = false;

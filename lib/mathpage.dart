@@ -14,8 +14,8 @@ class _MathPageState extends State<MathPage> {
   final List<Widget> pages = [
     MathHome(),
     BioPage(),
-    LeaderboardPage(),
-    UserPage(),
+    LeaderboardPage(username: '', points: 0,),
+    UserPage(username: '',),
   ];
   bool showAppBar = true;
   @override

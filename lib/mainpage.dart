@@ -1,111 +1,208 @@
 import 'package:flutter/material.dart';
-import 'package:learning/mathpage.dart';
-import 'package:learning/cpage.dart';
+import 'package:learning/userpage.dart';
 
 class MainPage extends StatelessWidget {
+  final String username;
+
+  const MainPage({Key? key, required this.username}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF907F9F),
-      body: Center(
-        child: ListView(
-          shrinkWrap: true,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+
+        child: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: const Color(0xFF6F4E37),
+          title: Center(
+            child: Text(
+              'HOME',
+              style: TextStyle(
+                color: Color(0xFFFFFFFF),
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
+      backgroundColor: const Color(0xFFF7E7CE),
+      body: Stack(
+        children: [
+          Positioned(
+            top: 110,
+            left: 30,
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/temp/av.jpg'),
+              radius: 25,
+            ),
+          ),
+          Positioned(
+            top: 170,
+            left: 30,
+            child: Text(
+              'Hi, $username',
+              style: TextStyle(
+                color: Color(0xFF6F4E37),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 200,
+            left: 30,
+            child: Text(
+              'Your Streaks - 5🔥',
+              style: TextStyle(
+                color: Color(0xFF6F4E37),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 335,
+            left: 30,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/mhome');
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF6F4E37),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+                minimumSize: Size(170, 180),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image.asset(
+                    'assets/temp/math1.png',
+                    width: 110,
+                    height: 110,
+                  ),
+                  SizedBox(height: 10),
                   Text(
-                    'What would you like to study?',
+                    'Math',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 20),
-                  Container(
-                    width: 180, // Set a fixed width and height for the buttons
-                    height: 180,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => MathPage()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        padding: EdgeInsets.all(20),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/temp/math.png',
-                              height: 50, width: 50),
-                          SizedBox(height: 10),
-                          Text(
-                            'Math',
-                            style: TextStyle(
-                              color: Color(0xFF907F9F),
-                              fontSize: 24,
-                              fontFamily: 'Urbanist',
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Container(
-                    width: 180, // Set a fixed width and height for the buttons
-                    height: 180,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CPage()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        padding: EdgeInsets.all(20),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/temp/c.png',
-                              height: 50, width: 50),
-                          SizedBox(height: 10),
-                          Text(
-                            'C',
-                            style: TextStyle(
-                              color: Color(0xFF907F9F),
-                              fontSize: 24,
-                              fontFamily: 'Urbanist',
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
                   ),
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+          Positioned(
+            top: 335,
+            left: 230,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/bio');
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF6F4E37),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+                minimumSize: Size(170, 180),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/temp/bio1.png',
+                    width: 110,
+                    height: 110,
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Biomimicry',
+                    style: TextStyle(
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 550,
+            left: 230,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/lead');
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF6F4E37),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+                minimumSize: Size(170, 180),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/temp/lea1.png',
+                    width: 110,
+                    height: 110,
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Leaderboard',
+                    style: TextStyle(
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            top: 550,
+            left: 30,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserPage(username: username)));
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF6F4E37),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
+                ),
+                minimumSize: Size(170, 180),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/temp/user1.png',
+                    width: 110,
+                    height: 110,
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'User',
+                    style: TextStyle(
+                      color: Color(0xFFFFFFFF),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

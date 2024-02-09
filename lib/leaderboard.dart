@@ -1,132 +1,165 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+class LeaderboardPage extends StatelessWidget{
+  final String username;
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Leaderboard',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LeaderboardPage(),
-    );
-  }
-}
+  const LeaderboardPage({Key? key, required this.username, required this.points}) : super(key: key);
+  final int points;
 
-class LeaderboardPage extends StatelessWidget {
-  final List<User> users = [
-    User(
-        name: 'User 1',
-        avatarUrl: 'https://example.com/avatar1.jpg',
-        score: 1000),
-    User(
-        name: 'User 2',
-        avatarUrl: 'https://example.com/avatar2.jpg',
-        score: 900),
-    User(
-        name: 'User 3',
-        avatarUrl: 'https://example.com/avatar3.jpg',
-        score: 800),
-    User(
-        name: 'User 4',
-        avatarUrl: 'https://example.com/avatar4.jpg',
-        score: 700),
-    User(
-        name: 'User 5',
-        avatarUrl: 'https://example.com/avatar5.jpg',
-        score: 600),
-  ];
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text('Leaderboard',
-              style: TextStyle(
-                color: Color(0xFF907F9F),
-                fontSize: 45,
-                fontWeight: FontWeight.bold,
-              )),
+      floatingActionButton: Container(
+        height: 50,
+        width: 50,
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/main');
+          },
+          child: Image.asset('assets/temp/home1.png', height: 30, width: 30),
         ),
       ),
-      backgroundColor: Color(0xFF907F9F),
-      body: ListView(
+      backgroundColor: const Color(0xFFF7E7CE),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: const Color(0xFF6F4E37),
+          title: Center(
+            child: Text(
+              'Leaderboard',
+              style: TextStyle(
+                color: Color(0xFFFFFFFF),
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
+      body: Stack(
         children: [
-          buildTopThreeAvatars(),
-          Divider(),
-          buildUserList(),
+          Positioned(
+            top: 60,
+            left: 30,
+            child: Container(
+              color: Color(0xFF6F4E37),
+              height:800,
+              width:430,
+            ),),
+          Positioned(
+            top: 70,
+            left: 40,
+            child: Text('Position', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 70,
+            left: 210,
+            child: Text('User', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 70,
+            left: 390,
+            child: Text('Points', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 100,
+            left: 68,
+            child: Text('1.', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 180,
+            left: 68,
+            child: Text('2.', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 260,
+            left: 68,
+            child: Text('3.', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 100,
+            left: 190,
+            child: Text('$username', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 180,
+            left: 190,
+            child: Text('User01', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 260,
+            left: 190,
+            child: Text('User02', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 100,
+            left: 390,
+            child: Text('$points', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 180,
+            left: 390,
+            child: Text('20', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
+          Positioned(
+            top: 260,
+            left: 390,
+            child: Text('10', style:TextStyle(
+              color: Color(0xFFF7E7CE),
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+          ),
         ],
       ),
     );
   }
 
-  Widget buildTopThreeAvatars() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        buildPodiumUser(users[1], 2), // Middle avatar with rank 1
-        buildPodiumUser(users[0], 1), // First avatar
-        buildPodiumUser(users[2], 3), // Third avatar
-      ],
-    );
-  }
-
-  Widget buildPodiumUser(User user, int rank) {
-    return Column(
-      children: [
-        SizedBox(height: rank == 1 ? 10.0 : 0.0),
-        CircleAvatar(
-          backgroundImage: NetworkImage(user.avatarUrl),
-          radius: 48.0,
-        ),
-        SizedBox(height: 8.0),
-        Text(
-          'Rank $rank',
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-        ),
-        Text(
-          user.name,
-          style: TextStyle(fontSize: 18.0),
-        ),
-        Text(
-          '${user.score} Points',
-          style: TextStyle(fontSize: 18.0),
-        ),
-      ],
-    );
-  }
-
-  Widget buildUserList() {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: users.length,
-      itemBuilder: (context, index) {
-        final user = users[index];
-        return ListTile(
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(user.avatarUrl),
-          ),
-          title: Text(user.name),
-          trailing: Text('${user.score} Points'),
-        );
-      },
-    );
-  }
-}
-
-class User {
-  final String name;
-  final String avatarUrl;
-  final int score;
-
-  User({
-    required this.name,
-    required this.avatarUrl,
-    required this.score,
-  });
 }

@@ -15,8 +15,8 @@ class _CPageState extends State<CPage> {
   final List<Widget> pages = [
     CHome(),
     BioPage(),
-    LeaderboardPage(),
-    UserPage(),
+    LeaderboardPage(username: '', points: 0,),
+    UserPage(username: '',),
   ];
 
   @override

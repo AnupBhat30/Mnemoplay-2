@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:learning/loginpage.dart';
@@ -19,15 +18,17 @@ class _LogoScreenState extends State<LogoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF8B7EA8),
+      backgroundColor: Color(0xFFF7E7CE),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:[
-            Image.asset('assets/temp/logo.jpg'),
+            Image.asset('assets/temp/logo.png'),
           ],
         ),
       ),
     );
   }
 }
+
+

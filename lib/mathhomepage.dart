@@ -4,15 +4,16 @@ class MathHome extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color(0xFF907F9F),
+      backgroundColor: Color(0xFF6F4E37),
       floatingActionButton: Container(
         height: 50,
         width: 50,
+        color: Color(0xFF6F4E37),
         child: FloatingActionButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/c');
+            Navigator.pushNamed(context, '/main');
           },
-          child: Image.asset('assets/temp/c.png', height: 30, width: 30),
+          child: Image.asset('assets/temp/home1.png', height: 30, width: 30),
         ),
       ),
       body: Stack(
@@ -20,7 +21,7 @@ class MathHome extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/temp/mnemomap.png'),
+                image: AssetImage('assets/temp/newmap.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,17 +29,17 @@ class MathHome extends StatelessWidget {
             height: MediaQuery.of(context).size.height,
           ),
           Positioned(
-            top: 120.0,
-            left: 230.0,
+            top: 780.0,
+            left: 280.0,
             child: Stack(
               alignment: Alignment.center,
               children: [
-                    GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/mlv1');
-                          },
-                        child: Image.asset('assets/temp/level.png', height:45, width:45)
-                    ),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/mlv1');
+                    },
+                    child: Image.asset('assets/temp/level.png', height:45, width:45)
+                ),
                 Positioned(
                   top: 10,
                   child: Text(
@@ -49,47 +50,47 @@ class MathHome extends StatelessWidget {
                   ),
                   ),
                 ),
-                  ],
-            ),
-            ),
-          Positioned(
-            top: 235.0,
-            left: 230.0,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                    GestureDetector(
-                onTap: () {
-                      Navigator.pushNamed(context, '/');},
-                    child: Image.asset('assets/temp/level.png', height:45, width:45)
-                    ),
-                Text(
-                    '2', style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue,
-                ),
-                ),
-                  ],
+              ],
             ),
           ),
           Positioned(
-            top: 370.0,
-            left: 230.0,
+            top: 480.0,
+            left: 140.0,
             child: Stack(
               alignment: Alignment.center,
               children: [
-                    GestureDetector(
-                onTap: () {
+                GestureDetector(
+                    onTap: () {
                       Navigator.pushNamed(context, '/');},
                     child: Image.asset('assets/temp/level.png', height:45, width:45)
-                    ),
-                Text('3',
-                style: TextStyle(
+                ),
+                Text(
+                  '2', style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.blue,
                 ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 180.0,
+            left: 290.0,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/');},
+                    child: Image.asset('assets/temp/level.png', height:45, width:45)
+                ),
+                Text('3',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
                 )
-                  ],
+              ],
             ),
           ),
         ],

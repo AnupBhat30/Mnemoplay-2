@@ -1,123 +1,85 @@
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
-class ArchPage extends StatefulWidget {
-  const ArchPage({Key? key}) : super(key: key);
-
-  @override
-  State<ArchPage> createState() => _ArchPageState();
-}
-
-class _ArchPageState extends State<ArchPage> with TickerProviderStateMixin {
-  bool _showText1 = false;
-  bool _showText2 = false;
-  bool _showButton = false; // New variable to control button visibility
-
-  @override
-  void initState() {
-    super.initState();
-    _startText1Animation();
-  }
-
-  void _startText1Animation() {
-    Future.delayed(Duration(seconds: 1), () {
-      setState(() {
-        _showText1 = true;
-      });
-
-      // Add another delay for the duration of the first text animation
-      Future.delayed(Duration(seconds: 2), () {
-        _startText2Animation();
-      });
-    });
-  }
-
-  void _startText2Animation() {
-    setState(() {
-      _showText2 = true;
-    });
-
-    // Add a delay for the duration of the second text animation
-    Future.delayed(Duration(seconds: 2), () {
-      setState(() {
-        _showButton = true;
-      });
-    });
-  }
-
+class ArchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFFFFFFFF),
-        title: Center(
-          child: Text(
-            'Architecture',
-            style: TextStyle(
-              color: Colors.green,
-              fontSize: 45,
-              fontWeight: FontWeight.bold,
+      backgroundColor: Color(0xFFCBCBCB),
+
+
+      body: Stack(
+        children: [
+       //   0xFF9A8E67 0xFFCBCBCB
+          Positioned(
+            top: 170,
+            left: 120,
+            child: Container(
+              width: 300.0,
+              height: 650.0,
+              color: Color(0xFF9A8E67),
             ),
           ),
-        ),
-      ),
-      backgroundColor: Colors.green,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height:150,
-          ),
-          AnimatedOpacity(
-            opacity: _showText1 ? 1.0 : 0.0,
-            duration: Duration(seconds: 1),
-            child: _showText1
-                ? Center(
-              child: Text(
-                'Let us look at some structures that',
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            )
-                : SizedBox.shrink(),
-          ),
-          SizedBox(height: 20),
-          AnimatedOpacity(
-            opacity: _showText2 ? 1.0 : 0.0,
-            duration: Duration(seconds: 1),
-            child: _showText2
-                ? Text(
-              'are inspired by nature',
+          Positioned(
+            top: 250,
+            left: 30,
+            child: Text(
+              'ARCHITECTURE',
               style: TextStyle(
-                fontSize: 30.0,
+                color: Colors.black87,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
               ),
-            )
-                : SizedBox.shrink(),
+            ),
           ),
-          SizedBox(height: 250),
-          if (_showButton)
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/wm');
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.orange),
-                shape: MaterialStateProperty.all(StadiumBorder()),
+          Positioned(
+            top: 100,
+            left: 130,
+            child: Image.asset('assets/temp/italy.png',
+              width: 400,
+              height: 200,
+            ),
+          ),
+          Positioned(
+            top: 350,
+            left: -100,
+            child: Image.asset('assets/temp/paris.png',
+              width: 410,
+              height: 200,
+            ),
+          ),
+          Positioned(
+            top: 400,
+            left: 190,
+            child: Text(
+              '       Let us look\nat some architecture \n  inspired by nature',
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
-              child: Text(
-                'Next',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+            ),
+          ),
+          Positioned(
+            top: 600,
+            left: 30,
+            child: Image.asset('assets/temp/sen.png',
+              width: 250,
+              height: 150,
+            ),
+          ),
+
+            Positioned(
+              top: 835,
+              left: 350,
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/wmap');
+                },
+                backgroundColor: Color(0xFF9A8E67),
+                child: Icon(Icons.arrow_forward),
               ),
-            )
+            ),
+
         ],
       ),
     );
