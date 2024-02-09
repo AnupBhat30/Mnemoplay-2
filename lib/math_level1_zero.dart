@@ -32,7 +32,7 @@ class MLevel1Zero extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
+            top: 410,
             left: 30,
             child:Text('Matrix in which all elements are zeroes ',
               style:TextStyle(
@@ -55,8 +55,8 @@ class MLevel1Zero extends StatelessWidget{
           ),
 
           Positioned(
-            top: 350,
-            left: 30,
+            top: 700,
+            left: 140,
             child:Container(
               child:ElevatedButton(
                 onPressed: () {

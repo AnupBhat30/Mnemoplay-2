@@ -23,7 +23,7 @@ class MLevel1TracePage extends StatelessWidget{
       body:Stack(
         children: [
           Positioned(
-            top: 110,
+            top: 75,
             left: 30,
             child:Image.asset('assets/temp/m1t.png',
               width: 350,
@@ -31,9 +31,9 @@ class MLevel1TracePage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
+            top: 420,
             left: 30,
-            child:Text('Trace of a diagonal matrix is the sum of elements \n                          in the main diagonal',
+            child:Text('Trace of a diagonal matrix is the sum \nof elements in the main diagonal',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -42,9 +42,9 @@ class MLevel1TracePage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 200,
-            left: 30,
-            child:Text('The trace of the above diagonal matrix is, 2+3+4 \n                         which is equal to 9',
+            top: 550,
+            left: 27,
+            child:Text('The trace of the above diagonal matrix \nis, 2+3+4 which is equal to 9',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -54,8 +54,8 @@ class MLevel1TracePage extends StatelessWidget{
           ),
 
           Positioned(
-            top: 350,
-            left: 30,
+            top: 700,
+            left: 140,
             child:Container(
               child:ElevatedButton(
                 onPressed: () {

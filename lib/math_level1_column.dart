@@ -33,8 +33,8 @@ class MLevel1ColumnPage extends StatelessWidget{
           ),
           Positioned(
             top: 400,
-            left: 30,
-            child:Text('A matrix having only 1 column is called a \n                        column matrix.',
+            left: 25,
+            child:Text('A matrix having only 1 column is called a \ncolumn matrix.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -45,7 +45,7 @@ class MLevel1ColumnPage extends StatelessWidget{
           Positioned(
             top: 500,
             left: 25,
-            child:Text('The matrix can have n number of rows but \n                             only 1 column.',
+            child:Text('The matrix can have n number of rows but \nonly 1 column.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,

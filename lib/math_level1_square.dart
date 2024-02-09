@@ -23,7 +23,7 @@ class MLevel1SquarePage extends StatelessWidget{
       body:Stack(
         children: [
           Positioned(
-            top: 110,
+            top: 80,
             left: 30,
             child:Image.asset('assets/temp/m1s.png',
               width: 350,
@@ -31,41 +31,41 @@ class MLevel1SquarePage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
-            left: 30,
-            child:Text('A matrix with equal number of rows and columns\n                       is called a square matrix.',
-              style:TextStyle(
-                color: Color(0xFF6F4E37),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Positioned(
-            top: 200,
-            left: 30,
-            child:Text('     Determinant can be calculated for square \n                              matrices only.',
-              style:TextStyle(
-                color: Color(0xFF6F4E37),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Positioned(
-            top: 250,
-            left: 30,
-            child:Text('In the above example, the matrix B has 3 rows \n                            and 3 columns',
-              style:TextStyle(
-                color: Color(0xFF6F4E37),
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Positioned(
             top: 350,
             left: 30,
+            child:Text('A matrix with equal number of rows and\ncolumns is called a square matrix.',
+              style:TextStyle(
+                color: Color(0xFF6F4E37),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 450,
+            left: 30,
+            child:Text('Determinant can be calculated for \nsquare matrices only.',
+              style:TextStyle(
+                color: Color(0xFF6F4E37),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 540,
+            left: 30,
+            child:Text('In the above example, the matrix B has \n3 rows and 3 columns',
+              style:TextStyle(
+                color: Color(0xFF6F4E37),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 700,
+            left: 140,
             child:Container(
               child:ElevatedButton(
                 onPressed: () {

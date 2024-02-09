@@ -31,9 +31,9 @@ class MLevel1TriangularPage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
+            top: 300,
             left: 30,
-            child:Text('A triangular matrix is a special type of square \n   matrix in which all elements either above \n       or below the main diagonal are zero',
+            child:Text('A triangular matrix is a special type of\nsquare matrix in which all elements either\nabove or below the main diagonal\nare zero',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -42,9 +42,9 @@ class MLevel1TriangularPage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 200,
+            top: 450,
             left: 30,
-            child:Text('The matrix above, is a lower triangular matrix.',
+            child:Text('The matrix above, is a lower\ntriangular matrix.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -54,8 +54,8 @@ class MLevel1TriangularPage extends StatelessWidget{
           ),
 
           Positioned(
-            top: 350,
-            left: 30,
+            top: 700,
+            left: 140,
             child:Container(
               child:ElevatedButton(
                 onPressed: () {

@@ -23,7 +23,7 @@ class MLevel1RowPage extends StatelessWidget{
       body:Stack(
         children: [
           Positioned(
-            top: 110,
+            top: 70,
             left: 30,
             child:Image.asset('assets/temp/m1r.png',
               width: 350,
@@ -31,9 +31,9 @@ class MLevel1RowPage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
+            top: 390,
             left: 30,
-            child:Text('A matrix having only 1 row is called a row matrix.',
+            child:Text('A matrix having only 1 row is called a \nrow matrix.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -42,9 +42,9 @@ class MLevel1RowPage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 200,
+            top: 490,
             left: 30,
-            child:Text('The matrix can have n number of columns but \n                             only 1 column.',
+            child:Text('The matrix can have n number of \ncolumns but only 1 column.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -53,8 +53,8 @@ class MLevel1RowPage extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 250,
-            left: 30,
+            top: 700,
+            left: 140,
             child:Container(
 
               child:ElevatedButton(

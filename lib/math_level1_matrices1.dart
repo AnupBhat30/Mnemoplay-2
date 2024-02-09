@@ -23,7 +23,7 @@ class MLevel1Page1 extends StatelessWidget{
       body:Stack(
         children: [
           Positioned(
-            top: 110,
+            top: 90,
             left: 30,
             child:Image.asset('assets/temp/m1.png',
               width: 350,
@@ -31,9 +31,9 @@ class MLevel1Page1 extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 110,
+            top: 400,
             left: 30,
-            child:Text('A matrix is like a grid of numbers or values \n           arranged in rows and columns.',
+            child:Text(' A matrix is like a grid of numbers or \n values arranged in rows and columns.',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -42,9 +42,9 @@ class MLevel1Page1 extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 200,
+            top: 490,
             left: 30,
-            child:Text('In the above example, there are 3 rows and 3\n                                columns',
+            child:Text(' In the above example, there are 3 rows \n and 4 columns',
               style:TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -53,8 +53,8 @@ class MLevel1Page1 extends StatelessWidget{
             ),
           ),
           Positioned(
-            top: 270,
-            left: 30,
+            top: 700,
+            left: 140,
             child:Container(
 
               child:ElevatedButton(
