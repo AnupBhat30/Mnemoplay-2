@@ -5,7 +5,17 @@ class WorldMapPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/bio');
+          },
+          child: Icon(Icons.nature),
+          backgroundColor: Color(0xFFFFFFFF),
+        ),
+
+
+
+    body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Center(
           child: Stack(

@@ -30,7 +30,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 150,
-            left: 150,
+            left: 130,
             child: Image.asset('assets/temp/edenar.png',
               height: 150 ,
               width: 150,
@@ -38,7 +38,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 300,
-            left: 170,
+            left: 150,
             child: Text('Eden Project', style: TextStyle(
               color: Color(0xFFF4C56E),
               fontSize: 20.0,
@@ -48,7 +48,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 400,
-            left: 150,
+            left: 130,
             child: Image.asset('assets/temp/bulletar.png',
               height: 150 ,
               width: 150,
@@ -56,7 +56,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 550,
-            left: 170,
+            left: 150,
             child: Text('Bullet Train', style: TextStyle(
               color: Color(0xFFF4C56E),
               fontSize: 20.0,
@@ -66,7 +66,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 650,
-            left: 150,
+            left: 130,
             child: Image.asset('assets/temp/eiffelar.png',
               height: 150 ,
               width: 150,
@@ -74,7 +74,7 @@ class ARPage extends StatelessWidget {
           ),
           Positioned(
             top: 810,
-            left: 170,
+            left: 150,
             child: Text('Eiffel Tower', style: TextStyle(
               color: Color(0xFFF4C56E),
               fontSize: 20.0,

@@ -69,7 +69,7 @@ class LeaderboardPage extends StatelessWidget{
           ),
           Positioned(
             top: 70,
-            left: 390,
+            left: 360,
             child: Text('Points', style:TextStyle(
               color: Color(0xFFF7E7CE),
               fontWeight: FontWeight.bold,

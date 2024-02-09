@@ -124,7 +124,7 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/math');
+                Navigator.of(context).pushNamed('/main');
               },
               child: Text('OK'),
             ),
