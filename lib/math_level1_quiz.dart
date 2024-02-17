@@ -12,6 +12,7 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
   int _score = 0;
   int _secondsRemaining = 30;
   final int totalQuestions = 10;
+  int _points = 0;
 
   List<QuizQuestion> _questions = [
     QuizQuestion(
@@ -99,6 +100,7 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
     if (_questions[_currentQuestionIndex].correctAnswer == selectedAnswer) {
       setState(() {
         _score++;
+        _points += 10;
       });
     }
     _nextQuestion();
@@ -120,7 +122,13 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
       builder: (context) {
         return AlertDialog(
           title: Text('Quiz Completed'),
-          content: Text('Your Score: $_score out of $totalQuestions'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('Your Score: $_score out of $totalQuestions'),
+              Text('Total Points: $_points'), // Display total points
+            ],
+          ),
           actions: <Widget>[
             TextButton(
               onPressed: () {
@@ -137,8 +145,8 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
   Widget _buildQuestionImage() {
     if (_questions[_currentQuestionIndex].imageAssetPath.isNotEmpty) {
       return Container(
-        width: 100,
-        height: 100,
+        width: 200,
+        height: 200,
         child: Image.asset(_questions[_currentQuestionIndex].imageAssetPath),
       );
     } else {
@@ -154,7 +162,7 @@ class _MLevel1QuizState extends State<MLevel1Quiz>{
         backgroundColor: Color(0xFF6F4E37),
         title: Center(
           child: Text(
-            'Types Of Matrices',
+            'Matrices Quiz',
             style: TextStyle(
               color: Color(0xFFF7E7CE),
               fontSize: 30,

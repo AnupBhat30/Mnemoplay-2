@@ -85,7 +85,7 @@ class UserPage extends StatelessWidget {
           ),
           Positioned(
             top: 300,
-            left: 250,
+            left: 230,
             child: SizedBox(
               height: 120,
               width: 180,

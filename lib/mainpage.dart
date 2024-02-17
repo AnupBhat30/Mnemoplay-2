@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:learning/userpage.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   final String username;
 
   const MainPage({Key? key, required this.username}) : super(key: key);
 
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +47,7 @@ class MainPage extends StatelessWidget {
             top: 170,
             left: 30,
             child: Text(
-              'Hi, $username',
+              'Hi, anup',
               style: TextStyle(
                 color: Color(0xFF6F4E37),
                 fontSize: 20,
@@ -67,12 +72,12 @@ class MainPage extends StatelessWidget {
             left: 30,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/mhome');
+                Navigator.of(context).pushNamed('/cm');
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFF6F4E37),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 minimumSize: Size(170, 180),
               ),
@@ -107,7 +112,7 @@ class MainPage extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFF6F4E37),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 minimumSize: Size(170, 180),
               ),
@@ -142,7 +147,7 @@ class MainPage extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFF6F4E37),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 minimumSize: Size(170, 180),
               ),
@@ -172,12 +177,12 @@ class MainPage extends StatelessWidget {
             left: 30,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserPage(username: username)));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserPage(username: widget.username)));
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFF6F4E37),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 minimumSize: Size(170, 180),
               ),

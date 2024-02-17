@@ -29,59 +29,27 @@ class ARPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 150,
-            left: 130,
-            child: Image.asset('assets/temp/edenar.png',
-              height: 150 ,
-              width: 150,
+            top: 400,
+            left: 60,
+            child: Image.asset('assets/temp/worldar.png',
+              height: 300 ,
+              width: 300,
             ),
           ),
           Positioned(
             top: 300,
-            left: 150,
-            child: Text('Eden Project', style: TextStyle(
+            left: 60,
+            child: Text('World Map', style: TextStyle(
               color: Color(0xFFF4C56E),
-              fontSize: 20.0,
+              fontSize: 60.0,
               fontWeight: FontWeight.bold,
             ),
             ),
           ),
-          Positioned(
-            top: 400,
-            left: 130,
-            child: Image.asset('assets/temp/bulletar.png',
-              height: 150 ,
-              width: 150,
-            ),
-          ),
-          Positioned(
-            top: 550,
-            left: 150,
-            child: Text('Bullet Train', style: TextStyle(
-              color: Color(0xFFF4C56E),
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-            ),
-          ),
-          Positioned(
-            top: 650,
-            left: 130,
-            child: Image.asset('assets/temp/eiffelar.png',
-              height: 150 ,
-              width: 150,
-            ),
-          ),
-          Positioned(
-            top: 810,
-            left: 150,
-            child: Text('Eiffel Tower', style: TextStyle(
-              color: Color(0xFFF4C56E),
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-            ),
-          ),
+
+
+
+
         ],
       ),
     );

@@ -146,8 +146,8 @@ class _BioQuizState extends State<BioQuiz>{
   Widget _buildQuestionImage() {
     if (_questions[_currentQuestionIndex].imageAssetPath.isNotEmpty) {
       return Container(
-        width: 100,
-        height: 100,
+        width: 200,
+        height: 150,
         child: Image.asset(_questions[_currentQuestionIndex].imageAssetPath),
       );
     } else {

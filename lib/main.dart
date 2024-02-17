@@ -25,6 +25,9 @@ import 'package:learning/math_level1_matrices1.dart';
 import 'package:learning/math_level1_row.dart';
 import 'package:learning/worldmap.dart';
 import 'arch.dart';
+import 'biopvp.dart';
+import 'choosebio.dart';
+import 'choosemath.dart';
 import 'eden1.dart';
 import 'eiffel.dart';
 import 'eiffel1.dart';
@@ -42,6 +45,9 @@ import 'package:learning/biopage.dart';
 import 'package:learning/worldmap.dart';
 import 'package:learning/eastpage.dart';
 import 'package:learning/eastpage1.dart';
+import 'package:learning/rewards.dart';
+import 'package:learning/pvpquiz.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -55,54 +61,62 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-            iconTheme: IconThemeData(
-                color:Color(0xFF907F9F)
-            )
-        ),
+            iconTheme: IconThemeData(color: Color(0xFF907F9F))),
         fontFamily: 'Urbanist',
       ),
       initialRoute: '/logo',
       routes: {
         '/login': (context) => LoginPage(),
-        '/main':(context)=>MainPage(username: '',),
+        '/main': (context) => MainPage(
+              username: '',
+            ),
         /*'/math':(context)=>MathPage(),*/
-        '/c':(context)=>CPage(),
+        '/c': (context) => CPage(),
         '/logo': (context) => LogoScreen(),
-        '/mlv1': (context) =>  MLevel1Page(),
+        '/mlv1': (context) => MLevel1Page(),
         '/mlv1p1': (context) => MLevel1Page1(),
-        '/mlv1rp': (context) =>  MLevel1RowPage(),
-        '/mlv1cp': (context) =>  MLevel1ColumnPage(),
-        '/mlv1sp': (context) =>  MLevel1SquarePage(),
-        '/mlv1dp': (context) =>  MLevel1DiagonalPage(),
+        '/mlv1rp': (context) => MLevel1RowPage(),
+        '/mlv1cp': (context) => MLevel1ColumnPage(),
+        '/mlv1sp': (context) => MLevel1SquarePage(),
+        '/mlv1dp': (context) => MLevel1DiagonalPage(),
         '/mlv1tp': (context) => MLevel1TracePage(),
-        '/mlv1trp': (context) =>  MLevel1TriangularPage(),
-        '/mlv1ip': (context)=>  MLevel1IdentityPage(),
-        '/mlv1zp': (context)=> MLevel1Zero(),
-        '/m1quiz': (context)=>const MLevel1Quiz(),
-        '/ar': (context)=> ArchPage(),
-        '/bio1': (context)=>const Bio1Page(),
-        '/bio2': (context)=>const Bio2Page(),
-        '/bio3': (context)=>const Bio3Page(),
-        '/bio4': (context)=>const Bio4Page(),
-        '/bio5': (context)=>const Bio5Page(),
-        '/bioq': (context)=>const BioQuiz(),
-        '/bio': (context)=> BioPage(),
-        '/lead': (context)=> LeaderboardPage(username: '', points: 0,),
-        '/user': (context)=> UserPage(username: '',),
-        '/wmap': (context)=> WorldMapPage(),
-        '/east': (context)=> EastPage(),
-        '/east1': (context)=> EastPage1(),
-        '/eden': (context)=> EdenPage(),
-        '/eden1': (context)=> Eden1Page(),
-        '/bird': (context)=> BirdPage(),
-        '/bird1': (context)=> BirdPage1(),
-        '/sing': (context)=> SingPage(),
-        '/sing1': (context)=> Sing1Page(),
-        '/eiffel': (context)=> EiffelPage(),
-        '/eiffel1': (context)=> Eiffel1Page(),
-        '/mhome': (context)=> MathHome(),
-        '/arr': (context)=> ARPage(),
-
+        '/mlv1trp': (context) => MLevel1TriangularPage(),
+        '/mlv1ip': (context) => MLevel1IdentityPage(),
+        '/mlv1zp': (context) => MLevel1Zero(),
+        '/m1quiz': (context) => const MLevel1Quiz(),
+        '/ar': (context) => ArchPage(),
+        '/bio1': (context) => const Bio1Page(),
+        '/bio2': (context) => const Bio2Page(),
+        '/bio3': (context) => const Bio3Page(),
+        '/bio4': (context) => const Bio4Page(),
+        '/bio5': (context) => const Bio5Page(),
+        '/bioq': (context) => const BioQuiz(),
+        '/bio': (context) => BioPage(),
+        '/lead': (context) => LeaderboardPage(
+              username: '',
+              points: 0,
+            ),
+        '/user': (context) => UserPage(
+              username: '',
+            ),
+        '/wmap': (context) => WorldMapPage(),
+        '/east': (context) => EastPage(),
+        '/east1': (context) => EastPage1(),
+        '/eden': (context) => EdenPage(),
+        '/eden1': (context) => Eden1Page(),
+        '/bird': (context) => BirdPage(),
+        '/bird1': (context) => BirdPage1(),
+        '/sing': (context) => SingPage(),
+        '/sing1': (context) => Sing1Page(),
+        '/eiffel': (context) => EiffelPage(),
+        '/eiffel1': (context) => Eiffel1Page(),
+        '/mhome': (context) => MathHome(),
+        '/arr': (context) => ARPage(),
+        '/rewards': (context) => RewardPage(),
+        '/pvp': (context)=> PvPQuiz(),
+        '/cm': (context)=> ChooseMath(),
+        '/bpvp': (context) => BioPvp(),
+        '/cb': (context) => ChooseBio(),
       },
     );
   }

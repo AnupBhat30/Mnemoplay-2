@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:learning/mainpage.dart';
 import 'package:learning/userpage.dart';
 
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -34,9 +33,12 @@ class _LoginPageState extends State<LoginPage> {
     setState(() {
       _confirmPassword = _confirmPasswordController.text;
     });
-    if (_password == _confirmPassword && _username.isNotEmpty && _password.isNotEmpty) {
+    if (_password == _confirmPassword &&
+        _username.isNotEmpty &&
+        _password.isNotEmpty) {
       // First navigate to MainPage
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainPage(username: _username)));
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => MainPage(username: _username)));
     } else {
       setState(() {
         _passwordController.clear();
@@ -45,8 +47,6 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -205,8 +205,8 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFF7E7CE),
-                        padding:
-                        const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 40, vertical: 10),
                         elevation: 20,
                       ),
                       child: const Text(
@@ -256,7 +256,8 @@ class _LoginPageState extends State<LoginPage> {
                             padding: const EdgeInsets.all(15),
                             elevation: 20,
                           ),
-                          child: Image.asset('assets/images/goo.png', height: 22, width: 22),
+                          child: Image.asset('assets/images/goo.png',
+                              height: 22, width: 22),
                         ),
                       ),
                       const SizedBox(width: 20),
@@ -282,7 +283,8 @@ class _LoginPageState extends State<LoginPage> {
                             padding: const EdgeInsets.all(15),
                             elevation: 20,
                           ),
-                          child: Image.asset('assets/images/fbb.png', height: 22, width: 22),
+                          child: Image.asset('assets/images/fbb.png',
+                              height: 22, width: 22),
                         ),
                       ),
                     ],
@@ -304,7 +306,7 @@ class _LoginPageState extends State<LoginPage> {
                 Center(
                   child: TextButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/user');
+                      Navigator.of(context).pushNamed('/rewards');
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.blue,

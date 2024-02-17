@@ -35,7 +35,7 @@ class BioPage extends StatelessWidget{
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFF167055),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   minimumSize: Size(170, 180),
                 ),
@@ -65,12 +65,12 @@ class BioPage extends StatelessWidget{
               left: 230,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/bioq');
+                  Navigator.of(context).pushNamed('/cb');
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFF167055),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   minimumSize: Size(170, 180),
                 ),
@@ -105,7 +105,7 @@ class BioPage extends StatelessWidget{
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFF167055),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   minimumSize: Size(170, 180),
                 ),
@@ -140,7 +140,7 @@ class BioPage extends StatelessWidget{
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFF167055),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   minimumSize: Size(170, 180),
                 ),

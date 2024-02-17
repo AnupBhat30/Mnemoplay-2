@@ -22,141 +22,217 @@ class LeaderboardPage extends StatelessWidget{
         ),
       ),
       backgroundColor: const Color(0xFFF7E7CE),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: const Color(0xFF6F4E37),
-          title: Center(
-            child: Text(
-              'Leaderboard',
-              style: TextStyle(
-                color: Color(0xFFFFFFFF),
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-      ),
+
       body: Stack(
         children: [
           Positioned(
             top: 60,
-            left: 30,
-            child: Container(
-              color: Color(0xFF6F4E37),
-              height:800,
-              width:430,
+            left: -4,
+              child: Container(
+                width:434,
+                height:350,
+               /* color:Color(0xFF6F4E37),*/
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(20),
+                  color:Color(0xFF6F4E37),
+                ),
+
+              )),
+          Positioned(
+            top: 60,
+            left: 120,
+              child: Text('Leaderboard', style:
+              TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                color: Color(0xFFF7E7CE),
+              )),),
+          const Positioned(
+            top: 150,
+            left: 169,
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFF7E7CE),
+                backgroundImage: AssetImage('assets/temp/avv1.png'),
+                radius:50,
+              ),),
+          const Positioned(
+            top: 200,
+            left: 10,
+            child: CircleAvatar(
+              backgroundColor: Color(0xFFF7E7CE),
+              backgroundImage: AssetImage('assets/temp/avv2.png'),
+              radius:50,
             ),),
-          Positioned(
-            top: 70,
-            left: 40,
-            child: Text('Position', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
+          const Positioned(
+            top: 200,
+            left: 320,
+            child: CircleAvatar(
+              backgroundColor: Color(0xFFF7E7CE),
+              backgroundImage: AssetImage('assets/temp/avv3.png'),
+              radius:50,
+            ),),
+          const Positioned(
+            top: 300,
+            left: 35,
+            child: Text('Anup',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                color: Color(0xFFF7E7CE),
             )),
           ),
-          Positioned(
-            top: 70,
-            left: 210,
-            child: Text('User', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
+          const Positioned(
+            top: 325,
+            left: 41,
+            child: Text('200',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 250,
+            left: 180,
+            child: Text('Sreyash',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 275,
+            left: 200,
+            child: Text('500',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 300,
+            left: 340,
+            child: Text('Callan',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 325,
+            left: 350,
+            child: Text('100',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
           ),
           Positioned(
-            top: 70,
-            left: 360,
-            child: Text('Points', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
+              top: 450,
+              left: -4,
+              child: Container(
+                width:434,
+                height:100,
+                /* color:Color(0xFF6F4E37),*/
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(20),
+                  color:Color(0xFF6F4E37),
+                ),
+
+              )),
+          Positioned(
+              top: 590,
+              left: -4,
+              child: Container(
+                width:434,
+                height:100,
+                /* color:Color(0xFF6F4E37),*/
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(20),
+                  color:Color(0xFF6F4E37),
+                ),
+
+              )),
+          Positioned(
+              top: 720,
+              left: -4,
+              child: Container(
+                width:434,
+                height:100,
+                /* color:Color(0xFF6F4E37),*/
+                decoration: BoxDecoration(
+
+                  borderRadius: BorderRadius.circular(20),
+                  color:Color(0xFF6F4E37),
+                ),
+
+              )),
+          const Positioned(
+            top: 485,
+            left: 0,
+            child: Text('   4.                             Rachelle                         50',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 620,
+            left: 0,
+            child: Text('   5.                             Dale                                 40',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                )),
+          ),
+          const Positioned(
+            top: 760,
+            left: 0,
+            child: Text('   6.                             Siddhali                             30',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Color(0xFFF7E7CE),
+                ),),
           ),
           Positioned(
-            top: 100,
-            left: 68,
-            child: Text('1.', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
+            top: 840,
+            left: 170,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/rewards');
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF6F4E37),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                minimumSize: Size(50, 30),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/temp/rewards.png',
+                    width: 50,
+                    height: 50,
+                  ),
+
+
+                ],
+              ),
+            ),
           ),
-          Positioned(
-            top: 180,
-            left: 68,
-            child: Text('2.', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 260,
-            left: 68,
-            child: Text('3.', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 100,
-            left: 190,
-            child: Text('$username', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 180,
-            left: 190,
-            child: Text('User01', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 260,
-            left: 190,
-            child: Text('User02', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 100,
-            left: 390,
-            child: Text('$points', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 180,
-            left: 390,
-            child: Text('20', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
-          Positioned(
-            top: 260,
-            left: 390,
-            child: Text('10', style:TextStyle(
-              color: Color(0xFFF7E7CE),
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
-          ),
+
         ],
       ),
     );
